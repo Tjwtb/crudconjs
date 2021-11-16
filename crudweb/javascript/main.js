@@ -57,3 +57,22 @@ function Actualizar()
             window.location.reload();
         });
 };
+
+
+referencia.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    console.log("hello");
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((data) => {
+        data.forEach((user) => {
+          referencia.style.backgroundColor = randomColor();
+          referencia.value = user.id;
+          fechaArribo.value = user.name;
+          cliente.value = user.email;
+          bultos.value = user.phone;
+          tiempo.value = user.website;
+        });
+      });
+  }
+});

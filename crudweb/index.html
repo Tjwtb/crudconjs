@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/estilo.css" rel="stylesheet">
+        <title>CRUD en Web</title>
+    </head>
+    <body>
+        <div id="ContenedorPrincipal">
+            <form id="miform"> 
+                <h1>Empleados</h1>
+                <input type="text" id="auxiliar" placeholder="Auxiliar" name="auxiliar"/>
+                <input type="text" id="nombre" placeholder="nombre" name="nombre" pattern="[a-zA-z]+"/>
+                <input type="text" id="apellido" placeholder="apellido" name="apellido"/>
+                <input type="text" id="correo" placeholder="correo" name="correo"/>
+                <input type="text" id="salario" placeholder="salario" name="salario" pattern="[0-9]+"/>
+                <button type="submit" id="btnInsertar" onclick="Insertar()">Insertar Empleado</button>
+                <button type="submit" id="btnActualizar" onclick="Actualizar()">Actualizar correo</button>
+                <button type="submit" id="btnEliminar" onclick="Eliminar()">Eliminar empleado</button>
+                <table id="mitabla">
+                        <th></th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Salario</th>
+                </table>
+            </form>
+        </div>
+        <script src="javascript/main.js?v=5"></script>
+    </body>
+</html>
